@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Concesionario de Automóviles</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Concesionario de Automóviles</h1>
+
+        <!-- Formulario para crear concesionario -->
+        <form id="concesionarioForm">
+            <h2>Crear Nuevo Concesionario</h2>
+            <label for="nombreC">Nombre:</label>
+            <input type="text" id="nombreC" name="nombreC" required>
+            <label for="direccionC">Dirección:</label>
+            <input type="text" id="direccionC" name="direccionC" required>
+            <button type="submit">Crear Concesionario</button>
+        </form>
+
+        <!-- Lista de concesionarios -->
+        <div id="concesionariosList">
+            <h2>Concesionarios Registrados</h2>
+            <ul id="concesionarios"></ul>
+        </div>
+
+        <!-- Formulario para crear vehículo -->
+        <form id="vehiculoForm">
+            <h2>Crear Nuevo Vehículo</h2>
+            <label for="marcaV">Marca:</label>
+            <input type="text" id="marcaV" name="marcaV" required>
+            <label for="modeloV">Modelo:</label>
+            <input type="text" id="modeloV" name="modeloV" required>
+            <label for="anioV">Año:</label>
+            <input type="number" id="anioV" name="anioV" required>
+            <label for="precioV">Precio:</label>
+            <input type="number" id="precioV" name="precioV" required>
+            <label for="idConcesionarioV">ID Concesionario:</label>
+            <input type="number" id="idConcesionarioV" name="idConcesionarioV" required>
+            <button type="submit">Crear Vehículo</button>
+        </form>
+
+        <!-- Lista de vehículos -->
+        <div id="vehiculosList">
+            <h2>Vehículos Disponibles</h2>
+            <ul id="vehiculos"></ul>
+        </div>
+
+        <!-- Formulario para crear insumo -->
+        <form id="insumoForm">
+            <h2>Crear Nuevo Insumo</h2>
+            <label for="nombreI">Nombre:</label>
+            <input type="text" id="nombreI" name="nombreI" required>
+            <label for="descripcionI">Descripción:</label>
+            <input type="text" id="descripcionI" name="descripcionI" required>
+            <label for="precioI">Precio:</label>
+            <input type="number" id="precioI" name="precioI" required>
+            <label for="idAlmacenI">ID Almacén:</label>
+            <input type="number" id="idAlmacenI" name="idAlmacenI" required>
+            <button type="submit">Crear Insumo</button>
+        </form>
+
+        <!-- Lista de insumos -->
+        <div id="insumosList">
+            <h2>Insumos Disponibles</h2>
+            <ul id="insumos"></ul>
+        </div>
+
+        <!-- Formulario para crear almacén -->
+        <form id="almacenForm">
+            <h2>Crear Nuevo Almacén</h2>
+            <label for="nombreA">Nombre:</label>
+            <input type="text" id="nombreA" name="nombreA" required>
+            <label for="ubicacionA">Ubicación:</label>
+            <input type="text" id="ubicacionA" name="ubicacionA" required>
+            <button type="submit">Crear Almacén</button>
+        </form>
+
+        <!-- Lista de almacenes -->
+        <div id="almacenesList">
+            <h2>Almacenes Registrados</h2>
+            <ul id="almacenes"></ul>
+        </div>
+
+        <!-- Formulario para crear empleado -->
+        <form id="empleadoForm">
+            <h2>Crear Nuevo Empleado</h2>
+            <label for="nombreE">Nombre:</label>
+            <input type="text" id="nombreE" name="nombreE" required>
+            <label for="cargoE">Cargo:</label>
+            <input type="text" id="cargoE" name="cargoE" required>
+            <label for="salarioE">Salario:</label>
+            <input type="number" id="salarioE" name="salarioE" required>
+            <label for="idConcesionarioE">ID Concesionario:</label>
+            <input type="number" id="idConcesionarioE" name="idConcesionarioE" required>
+            <button type="submit">Crear Empleado</button>
+        </form>
+
+        <!-- Lista de empleados -->
+        <div id="empleadosList">
+            <h2>Empleados Registrados</h2>
+            <ul id="empleados"></ul>
+        </div>
+
+        <!-- Formulario para crear cliente -->
+        <form id="clienteForm">
+            <h2>Crear Nuevo Cliente</h2>
+            <label for="nombreCl">Nombre:</label>
+            <input type="text" id="nombreCl" name="nombreCl" required>
+            <label for="direccionCl">Dirección:</label>
+            <input type="text" id="direccionCl" name="direccionCl" required>
+            <label for="idConcesionarioCl">ID Concesionario:</label>
+            <input type="number" id="idConcesionarioCl" name="idConcesionarioCl" required>
+            <button type="submit">Crear Cliente</button>
+        </form>
+
+        <!-- Lista de clientes -->
+        <div id="clientesList">
+            <h2>Clientes Registrados</h2>
+            <ul id="clientes"></ul>
+        </div>
+
+        <!-- Formulario para crear compra -->
+        <form id="compraForm">
+            <h2>Crear Nueva Compra</h2>
+            <label for="fechaCo">Fecha:</label>
+            <input type="date" id="fechaCo" name="fechaCo" required>
+            <label for="idClienteCo">ID Cliente:</label>
+            <input type="number" id="idClienteCo" name="idClienteCo" required>
+            <label for="idEmpleadoCo">ID Empleado:</label>
+            <input type="number" id="idEmpleadoCo" name="idEmpleadoCo" required>
+            <label for="precioTotalCo">Precio Total:</label>
+            <input type="number" id="precioTotalCo" name="precioTotalCo" required>
+            <button type="submit">Crear Compra</button>
+        </form>
+
+        <!-- Lista de compras -->
+        <div id="comprasList">
+            <h2>Compras Registradas</h2>
+            <ul id="compras"></ul>
+        </div>
+
+        <!-- Formulario para crear detalle de venta -->
+        <form id="detalleVentaForm">
+            <h2>Crear Nuevo Detalle de Venta</h2>
+            <label for="idCompraDV">ID Compra:</label>
+            <input type="number" id="idCompraDV" name="idCompraDV" required>
+            <label for="idProductoDV">ID Producto:</label>
+            <input type="number" id="idProductoDV" name="idProductoDV" required>
+            <label for="tipoProductoDV">Tipo de Producto (vehículo/insumo):</label>
+            <input type="text" id="tipoProductoDV" name="tipoProductoDV" required>
+            <label for="cantidadDV">Cantidad:</label>
+            <input type="number" id="cantidadDV" name="cantidadDV" required>
+            <label for="precioUnitarioDV">Precio Unitario:</label>
+            <input type="number" id="precioUnitarioDV" name="precioUnitarioDV" required>
+            <label for="precioTotalDV">Precio Total:</label>
+            <input type="number" id="precioTotalDV" name="precioTotalDV" required>
+            <button type="submit">Crear Detalle de Venta</button>
+        </form>
+
+        <!-- Lista de detalles de venta -->
+        <div id="detallesVentaList">
+            <h2>Detalles de Venta Registrados</h2>
+            <ul id="detallesVenta"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
